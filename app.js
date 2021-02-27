@@ -73,7 +73,7 @@ function getInitial(){
                 let index = data.result[0].problem.index;
                 if(index === "A") index = "AE";
                 let curr_id = data.result[0].id;
-                if(id === curr_id){
+                if(id != curr_id){
                         if(data.result[0].verdict && data.result[0].verdict != "TESTING"){
                             if(data.result[0].verdict === "OK"){
                                 readOutLoud(`Well done ! AC on problem ${index}`);
